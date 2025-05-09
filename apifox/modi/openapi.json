@@ -1635,11 +1635,7 @@
             "headers": {}
           }
         },
-        "security": [
-          {
-            "null": []
-          }
-        ]
+        "security": []
       }
     }
   },
