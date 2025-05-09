@@ -1,0 +1,1907 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "http",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "F1_inheritRoot/F1_childF1"
+    },
+    {
+      "name": "testcreate"
+    },
+    {
+      "name": "F2_ref  one auth/F2_childF1"
+    },
+    {
+      "name": "F3_ref 2 auth_required"
+    },
+    {
+      "name": "F5_ref 2 auth_required_Defaultvalue=null"
+    },
+    {
+      "name": "F4_ref 2 auth_unRequired"
+    },
+    {
+      "name": "Apis ref different Auth"
+    }
+  ],
+  "paths": {
+    "/F1/grandsonA1": {
+      "get": {
+        "summary": "F1_grandsonA1_multiple inherite",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "F1_inheritRoot/F1_childF1",
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_root1": []
+          }
+        ]
+      }
+    },
+    "/F1/grandsonA2": {
+      "get": {
+        "summary": "F1_grandsonA2_self defined",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "F1_inheritRoot/F1_childF1",
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_api2": []
+          }
+        ]
+      }
+    },
+    "/F2/grandsonA1": {
+      "get": {
+        "summary": "F2_grandsonA1_multiple inherite",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "F2_ref  one auth/F2_childF1",
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_folder1": []
+          }
+        ]
+      }
+    },
+    "/F2/grandsonA2": {
+      "get": {
+        "summary": "F2_grandsonA2_self defined",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "F2_ref  one auth/F2_childF1",
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_api2": []
+          }
+        ]
+      }
+    },
+    "/F3/childA1": {
+      "get": {
+        "summary": "F3_childA1_multiple inherite",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "F3_ref 2 auth_required",
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_folder1": []
+          },
+          {
+            "secureSchema_APIKey_folder2": []
+          }
+        ]
+      }
+    },
+    "/F5/childA1": {
+      "get": {
+        "summary": "F5_childA1_multiple inherite",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "F5_ref 2 auth_required_Defaultvalue=null",
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_folder1": []
+          },
+          {
+            "secureSchema_APIKey_folder2": []
+          }
+        ]
+      }
+    },
+    "/F4/childA1": {
+      "get": {
+        "summary": "F4_childA1_multiple inherite",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "F4_ref 2 auth_unRequired",
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_folder1": []
+          },
+          {
+            "secureSchema_APIKey_folder2": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_APIKey_header": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_APIKey_header",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_header": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_APIKey_query": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_APIKey_query",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_query": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_BearerToken": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_BearerToken",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_BearerToken": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_JWTHeader": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_JWTHeader",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_JWTHeader": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_JWTQuery": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_JWTQuery",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_JWTQuery": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_BasicAuth": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_BasicAuth",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_BasicAuth": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_DigestAuth": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_DigestAuth",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_DigestAuth": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_Oauth1.0_body": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_Oauth1.0_body",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_Oauth1.0_body": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_HAWK": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_HAWK",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_HAWK": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_AWS": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_AWS",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_AWS": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_kerberos": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_kerberos",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_kerberos": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_NTLM": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_NTLM",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_NTLM": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_Akamai": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_Akamai",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_Akamai": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_Oauth2_authorizationCode": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_Oauth2_authorizationCode",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_Oauth2_authorizationCode": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_Oauth2_clientCredentials": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_Oauth2_clientCredentials",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_Oauth2_clientCredentials": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_Oauth2_implicit": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_Oauth2_implicit",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_Oauth2_implicit": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_Oauth2_password": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_Oauth2_password",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_Oauth2_password": []
+          }
+        ]
+      }
+    },
+    "/ApiRefAuth/secureSchema_customType": {
+      "get": {
+        "summary": "ApiRefAuth_secureSchema_customType",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "Apis ref different Auth"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/A1": {
+      "get": {
+        "summary": "A1_inheriteRoot",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_root1": []
+          }
+        ]
+      }
+    },
+    "/A2": {
+      "get": {
+        "summary": "A2_ref schema",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_api1": []
+          }
+        ]
+      }
+    },
+    "/A3": {
+      "get": {
+        "summary": "A3_ref twice scheme",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "secureSchema_APIKey_api1": []
+          },
+          {
+            "secureSchema_APIKey_api1": []
+          },
+          {
+            "secureSchema_APIKey_duplicateNameTest1": []
+          }
+        ]
+      }
+    },
+    "/A4": {
+      "get": {
+        "summary": "A4_ref schema&OAS",
+        "deprecated": false,
+        "description": "apidesc",
+        "tags": [
+          "testcreate"
+        ],
+        "parameters": [
+          {
+            "name": "globalH1",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "111",
+            "schema": {
+              "type": "string",
+              "default": "111"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "title": "username",
+                      "description": "field desc"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "null": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pet": {
+        "required": [
+          "name",
+          "photoUrls",
+          "id",
+          "category",
+          "tags",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "description": "宠物ID编号"
+          },
+          "category": {
+            "$ref": "#/components/schemas/Category",
+            "description": "分组"
+          },
+          "name": {
+            "type": "string",
+            "description": "名称",
+            "examples": [
+              "doggie"
+            ]
+          },
+          "photoUrls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "照片URL"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Tag"
+            },
+            "description": "标签"
+          },
+          "status": {
+            "type": "string",
+            "description": "宠物销售状态",
+            "enum": [
+              "available",
+              "pending",
+              "sold"
+            ]
+          }
+        }
+      },
+      "Category": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "description": "分组ID编号"
+          },
+          "name": {
+            "type": "string",
+            "description": "分组名称"
+          }
+        },
+        "xml": {
+          "name": "Category"
+        }
+      },
+      "Tag": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "description": "标签ID编号"
+          },
+          "name": {
+            "type": "string",
+            "description": "标签名称"
+          }
+        },
+        "xml": {
+          "name": "Tag"
+        }
+      }
+    },
+    "securitySchemes": {
+      "secureSchema_APIKey_root1": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_root1_authName"
+      },
+      "secureSchema_APIKey_root2": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_root2_authName"
+      },
+      "secureSchema_APIKey_folder1": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_folder1_authName"
+      },
+      "secureSchema_APIKey_folder2": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_folder2_authName"
+      },
+      "secureSchema_APIKey_api1": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_api1_authName"
+      },
+      "secureSchema_APIKey_api2": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_api2_authName"
+      },
+      "secureSchema_APIKey_duplicateNameTest": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_duplicateNameTest1"
+      },
+      "secureSchema_APIKey_duplicateNameTest1": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_duplicateNameTest2"
+      },
+      "secureSchema_APIKey_unused": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_unused"
+      },
+      "secureSchema_APIKey_additionalFields": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "keyName"
+      },
+      "secureSchema_multipleFolder": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_header"
+      },
+      "secureSchema_APIKey_header": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "secureSchema_APIKey_header"
+      },
+      "secureSchema_APIKey_query": {
+        "type": "apiKey",
+        "in": "query",
+        "name": "secureSchema_APIKey_query"
+      },
+      "secureSchema_BearerToken": {
+        "type": "http",
+        "scheme": "bearer"
+      },
+      "secureSchema_JWTHeader": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      },
+      "secureSchema_JWTQuery": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      },
+      "secureSchema_BasicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      },
+      "secureSchema_DigestAuth": {
+        "type": "http",
+        "scheme": "digest"
+      },
+      "secureSchema_Oauth1.0_body": {
+        "type": "http",
+        "scheme": "oauth"
+      },
+      "secureSchema_Oauth1.0_header": {
+        "scheme": "oauth",
+        "type": "http"
+      },
+      "secureSchema_HAWK": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "hawkname"
+      },
+      "secureSchema_AWS": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "awsName"
+      },
+      "secureSchema_kerberos": {
+        "type": "http",
+        "scheme": "negotiate"
+      },
+      "secureSchema_NTLM": {
+        "type": "http",
+        "scheme": "negotiate"
+      },
+      "secureSchema_Akamai": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization"
+      },
+      "secureSchema_Oauth2_authorizationCode": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "{{auth_url}}",
+            "tokenUrl": "{{access_token_url}}",
+            "scopes": {
+              "scope1": "desc ofscope1"
+            },
+            "refreshUrl": "{{refresh_token_url}}"
+          }
+        }
+      },
+      "secureSchema_Oauth2_clientCredentials": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "scopes": {
+              "scope1": "desc of scope1"
+            },
+            "tokenUrl": "{{access_token_url}}"
+          }
+        }
+      },
+      "secureSchema_Oauth2_implicit": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "{{auth_url}}",
+            "scopes": {
+              "scope1": "desc of scope1"
+            }
+          }
+        }
+      },
+      "secureSchema_Oauth2_password": {
+        "type": "oauth2",
+        "flows": {
+          "password": {
+            "tokenUrl": "{{access_token_url}}",
+            "scopes": {
+              "scope1": "desc of scope"
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [],
+  "security": []
+}
